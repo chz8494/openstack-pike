@@ -31,18 +31,11 @@ port_binding_controller = {{ opendaylight_port_binding_type }}
 {% endif %}
 
 [ml2_type_vlan]
-{% if enable_ironic | bool %}
 network_vlan_ranges = physnet1
-{% else %}
-network_vlan_ranges =
-{% endif %}
 
 [ml2_type_flat]
-{% if enable_ironic | bool %}
-flat_networks = *
-{% else %}
-flat_networks = {% for bridge in neutron_bridge_name.split(',') %}physnet{{ loop.index0 + 1 }}{% if not loop.last %},{% endif %}{% endfor %}
-{% endif %}
+
+flat_networks = 
 
 {% if not enable_hyperv | bool %}
 [ml2_type_vxlan]
