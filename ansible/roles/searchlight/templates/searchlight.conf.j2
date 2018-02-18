@@ -65,13 +65,13 @@ enabled = {{ enable_designate | bool }}
 enabled = {{ enable_designate | bool }}
 
 [resource_plugin:os_swift_account]
-enabled = {{ enable_swift | bool }}
+enabled = False
 
 [resource_plugin:os_swift_container]
-enabled = {{ enable_swift | bool }}
+enabled = False
 
 [resource_plugin:os_swift_object]
-enabled = {{ enable_swift | bool }}
+enabled = False
 
 [resource_plugin:os_nova_server]
 enabled = {{ enable_nova | bool }}
