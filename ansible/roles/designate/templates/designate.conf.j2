@@ -46,7 +46,7 @@ workers = {{ openstack_service_workers }}
 # TODO (egonzalez): Remove enabled option in worker section once https://bugs.launchpad.net/designate/+bug/1676827
 # is fixed. Enabled is deprecated but without explicitly enabling worker service not start
 enabled = True
-notify = True
+notify = False
 workers = {{ openstack_service_workers }}
 
 [service:pool_manager]
@@ -72,7 +72,7 @@ idle_timeout = 3600
 
 [handler:nova_fixed]
 #NOTE: zone_id must be manually filled an ID from openstack zone list
-zone_id =
+zone_id = 46c80ed9-9e82-4838-89cd-e57120236e60
 notification_topics = notifications_designate
 control_exchange = nova
 formatv4 = '%(octet0)s-%(octet1)s-%(octet2)s-%(octet3)s.%(zone)s'
@@ -83,7 +83,7 @@ formatv6 = '%(hostname)s.%(project)s.%(zone)s'
 
 [handler:neutron_floatingip]
 #NOTE: zone_id must be manually filled an ID from openstack zone list
-zone_id =
+zone_id = 46c80ed9-9e82-4838-89cd-e57120236e60
 notification_topics = notifications_designate
 control_exchange = neutron
 formatv4 = '%(octet0)s-%(octet1)s-%(octet2)s-%(octet3)s.%(zone)s'
