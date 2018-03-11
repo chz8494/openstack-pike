@@ -37,3 +37,10 @@ check_for_updates = false
 [security]
 admin_user = admin
 admin_password = {{ grafana_admin_password }}
+
+[external_image_storage]
+provider = gcs 
+
+[external_image_storage.gcs] 
+key_file = /etc/grafana/key_file
+bucket = grafana-quiet

@@ -72,7 +72,7 @@ idle_timeout = 3600
 
 [handler:nova_fixed]
 #NOTE: zone_id must be manually filled an ID from openstack zone list
-zone_id = 46c80ed9-9e82-4838-89cd-e57120236e60
+zone_id = 25577576-f720-48fa-9a3c-01ed7f3b113f
 notification_topics = notifications_designate
 control_exchange = nova
 formatv4 = '%(octet0)s-%(octet1)s-%(octet2)s-%(octet3)s.%(zone)s'
@@ -83,7 +83,7 @@ formatv6 = '%(hostname)s.%(project)s.%(zone)s'
 
 [handler:neutron_floatingip]
 #NOTE: zone_id must be manually filled an ID from openstack zone list
-zone_id = 46c80ed9-9e82-4838-89cd-e57120236e60
+zone_id = 25577576-f720-48fa-9a3c-01ed7f3b113f
 notification_topics = notifications_designate
 control_exchange = neutron
 formatv4 = '%(octet0)s-%(octet1)s-%(octet2)s-%(octet3)s.%(zone)s'
